@@ -1,0 +1,3 @@
+#include "resource.h"
+
+IDI_ICON        ICON        "C:\\Users\\malac\\Documents\\C++\\CalculatorFull\\Icon\\icon.ico"
