@@ -1,51 +1,43 @@
 #include <iostream>
-#include "resource.h"
 
-using namespace std;
+int main() {
+  int num1, num2;
+  char opr;
 
-int num1, num2;
-char opr;
-
-int main()
-{
-    cout << "Calculator" << endl;
-    cout << "version 1.3.1 / build 107" << endl;
-    cout << "" << endl;
-    cout << "Calculator syntax - number1 (symbol) number2." << endl;
-    cout << "Allowed symbols are +, -, *, / and %." << endl;
-    cout << "" << endl;
-    cout << "" << endl;
-    cout << "Enter the two integers separated by a space: ";
-    cin >> num1 >> num2;
-    cout << "Enter the math operator (+, -, *, / or %): ";
-    cin >> opr;
-    cout << "" << endl;
-    cout << "Calculating equation..." << endl;
-    switch (opr) {
+  std::cout << "Calculator" << std::endl;
+  std::cout << "version 1.3.1 / build 107" << std::endl;
+  std::cout << "Calculator syntax - number1 (symbol) number2." << std::endl;
+  std::cout << "Allowed symbols are +, -, *, / and %." << std::endl;
+  std::cout << "Enter the two integers separated by a space: ";
+  std::cin >> num1 >> num2;
+  std::cout << "Enter the math operator (+, -, *, / or %): ";
+  std::cin >> opr;
+  std::cout << "Calculating equation..." << std::endl;
+  switch (opr) {
     case '+':
-        cout << num1 + num2 << endl;
-            break;
+      std::cout << num1 + num2 << std::endl;
+      break;
     case '-':
-        cout << num1 - num2 << endl;
-            break;
+      std::cout << num1 - num2 << std::endl;
+      break;
     case '*':
-        cout << num1 * num2 << endl;
-            break;
+      std::cout << num1 * num2 << std::endl;
+      break;
     case '/':
-        if (num2 != 0)
-            cout << num1 / num2 << endl;
-        else
-            cout << "Cannot divide by zero." << endl;
-                break;
+      if (num2 != 0) {
+        std::cout << num1 / num2 << std::endl;
+      }
+      else {
+        std::cout << "Cannot divide by zero." << std::endl;
+        break;
+      }
     case '%':
-        cout << num1 % num2 << endl;
-            break;
+      std::cout << num1 % num2 << std::endl;
+        break;
     default:
-        cout << "Illegal operation. Please try again." << endl;
-    }
-    cout << "" << endl;
-    cout << "Press any key to exit..." << endl;
-    cin.get();
-    cin.get();
-    return 0;
+      std::cout << "Illegal operation. Please try again." << std::endl;
+  }
+  std::cout << "Press any key to exit..." << std::endl;
+  std::cin.get();
+  return 0;
 }
